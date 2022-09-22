@@ -2,9 +2,13 @@
 if __name__ == '__main__':
     import sys
     count = len(sys.argv)-1
-    print(count, ' arguments: ')
-    for items in enumerate(sys.argv):
-        if items[0] == 0:
-            pass
-        else:
-            print(f'{items[0]}: {items[1]}')
+    if count == 0:
+        print(count, 'arguments: ')
+    elif count == 1:
+        print(count, 'argument: ')
+    else:
+        print(count, 'arguments: ')
+
+    for i in range(count):
+        print(f'{i+1}: {sys.argv[i+1]}')
+
