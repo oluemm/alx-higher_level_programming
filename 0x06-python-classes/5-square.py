@@ -2,9 +2,6 @@
 """Defines a class Square"""
 
 
-from tabnanny import verbose
-
-
 class Square:
     """Represents a square
     Attributes:
