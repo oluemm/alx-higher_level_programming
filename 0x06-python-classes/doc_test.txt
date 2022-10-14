@@ -1,0 +1,17 @@
+The ``5-square`` module
+=======================
+using ``Square`` class
+
+    >>> from . import 5-square.Square
+
+    >>> my_square = Square(89)
+    >>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    Area: 7921 for size: 89
+
+    >>> my_square.size = 3
+    >>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    Area: 9 for size: 3
+
+    >>> my_square.size = 5
+    >>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    Area: 25 for size: 5

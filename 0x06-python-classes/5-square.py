@@ -2,11 +2,31 @@
 """Defines a class Square"""
 
 
+from tabnanny import verbose
+
+
 class Square:
     """Represents a square
     Attributes:
         __size (int): size of a side of the square
+    ##Doctest: Testing this class
+    >>> my_square = Square(89)
+    >>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    Area: 7921 for size: 89
+
+    >>> my_square.size = 3
+    >>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    Area: 9 for size: 3
+
+    >>> try:
+    ...     my_square.size = "5 feet"
+    ...     print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+    ... except Exception as e:
+    ...     print(e)
+    size must be an integer
+
     """
+
     def __init__(self, size=0):
         """initializes the square
         Args:
@@ -57,3 +77,7 @@ class Square:
             return
         for i in range(self.__size):
             print("".join(["#" for j in range(self.__size)]))
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
