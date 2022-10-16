@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""
-Defines an addition function.
+""" Defines an addition function.
 `Usage`
-``add_integer(...)``` returns the addition of the two arguments. For numbers, that value is equivalent to using the ``+`` operator.
-"""
+``add_integer(...)``` returns the addition of the two arguments. 
+For numbers, that value is equivalent to using the ``+`` operator. """
 
 
 def add_integer(a, b=98):
