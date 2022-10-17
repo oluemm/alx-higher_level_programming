@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """Divides all element of a matrix"""
 
+
 def matrix_divided(matrix, div):
     """Divides all element of a matrix.
-    
-    Usage: 
+
+    Usage:
         matrix_divided(matrix,div)
 
     Args:
@@ -18,7 +19,7 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix representing the result of the division.
     """
-    # `isinstance(matrix, list)` returns `True` if the matrix is a list 
+    # `isinstance(matrix, list)` returns `True` if the matrix is a list
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(element, int) or isinstance(element, float))
