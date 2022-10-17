@@ -1,0 +1,62 @@
+==============================
+How to Use 4-say_my_name.py
+==============================
+
+This module accepts string arguments and prints out a statement.
+=====
+Usage
+=====
+``print_square(size)``
+>>> print_square = __import__('4-print_square').print_square
+
+===================================================
+Normal Test
+===================================================
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+>>> print_square(15)
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+###############
+
+>>> print_square(-15)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> print_square("a")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-1.7)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> print_square(0)
+ 
+>>> print_square(1)
+#
+>>> my_list = [1,2,3,4]
+>>> print_square(my_list)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
