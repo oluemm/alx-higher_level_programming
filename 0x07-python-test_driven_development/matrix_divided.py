@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# python file naming convention rejects files starting with numbers
 """Divides all element of a matrix"""
 
 def matrix_divided(matrix, div):
