@@ -4,7 +4,7 @@
 
 def lookup(obj):
     """Returns a list of an object's available attributes.
-    Args: 
+    Args:
         obj:Object to lookup
     """
     return (dir(obj))
