@@ -23,7 +23,7 @@ def fib2(n):
         a, b = b, a+b
     return result
 
-#This prevents the code from being executed at import time
+# This prevents the code from being executed at import time
 # it only runs when the function is called from a script OR
 # this file is ran directlyin terminal mode
 if __name__ == "__main__":
