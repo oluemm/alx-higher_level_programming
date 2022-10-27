@@ -19,38 +19,36 @@ def print_stats(size, status_codes):
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
 
-
 if __name__ == "__main__":
     import sys
 
-    size = 0  # initializes size to zero
+    size = 0 # initializes size to zero
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
-    status_codes = {}  # creates a dictionary of status codes
+    status_codes = {} # creates a dictionary of status codes
 
     count = 0
 
     try:
-        for line in sys.stdin:  # read each lines from standard input
-            if count == 10:  # if the lines are 10 in number
-                print_stats(size, status_codes)  # print the status
+        for line in sys.stdin:
+            if count == 10:
+                print_stats(size, status_codes)
                 count = 1
             else:
                 count += 1
 
-            line = line.split()  # split the logs using generic spaces
+            line = line.split()
 
             try:
-                size += int(line[-1])  # convert the last value to int and add to size
-            except (IndexError, ValueError):  #catch errors
-                pass  # ignore if errors are raised
+                size += int(line[-1])
+            except (IndexError, ValueError):
+                pass
 
             try:
-                if line[-2] in valid_codes:  # check if the status_codes are valid_codes
-                    if status_codes.get(line[-2], -1) == -1:  # chks if a key is not present
-                        # creates the k:v pair 
+                if line[-2] in valid_codes:
+                    if status_codes.get(line[-2], -1) == -1:
                         status_codes[line[-2]] = 1
                     else:
-                        status_codes[line[-2]] += 1  # if present increase the value by 1
+                        status_codes[line[-2]] += 1
             except IndexError:
                 pass
 

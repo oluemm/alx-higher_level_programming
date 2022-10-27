@@ -1,4 +1,4 @@
-*__*
+*__pyc*
 .venv
 .ipynb_checkpoints!/.vscode/
 !/.ipynb_checkpoints/
