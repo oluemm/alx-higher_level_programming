@@ -1,4 +1,4 @@
-#!/usr/bin/python3ads from standard input and computes metrics.
+#!/usr/bin/python3
 
 """
 After every ten lines or the input of a keyboard interruption (CTRL + C),
@@ -22,9 +22,10 @@ def print_stats(size, status_codes):
 if __name__ == "__main__":
     import sys
 
-    size = 0
-    status_codes = {}
+    size = 0 # initializes size to zero
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
+    status_codes = {} # creates a dictionary of status codes
+
     count = 0
 
     try:
