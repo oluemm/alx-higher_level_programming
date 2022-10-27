@@ -3,6 +3,8 @@
 
 
 class Base():
+    """Base class for almost a circle tasks
+    """
     __nb_objects = 0  # private class attrib: id tracker
 
     def __init__(self, id=None):  # instantiate an object
