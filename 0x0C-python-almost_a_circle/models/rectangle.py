@@ -119,3 +119,26 @@ class Rectangle(Base):
         coords = f"{self.x}/{self.y}"
         sides = f"{self.__width}/{self.__height}"
         return f"{shape} {coords} - {sides}"
+
+    def update(self, *args):
+        """Updating instance attributes using postional args"""
+        try:
+            self.id = args[0]
+        except IndexError:
+            pass
+        try:
+            self.__width = args[1]
+        except IndexError:
+            pass
+        try:
+            self.__height = args[2]
+        except IndexError:
+            pass
+        try:
+            self.x = args[3]
+        except IndexError:
+            pass
+        try:
+            self.y = args[4]
+        except IndexError:
+            pass
