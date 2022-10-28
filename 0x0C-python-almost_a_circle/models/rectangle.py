@@ -109,7 +109,6 @@ class Rectangle(Base):
             [print("#", end="") for w in range(self.__width)]
             print("")
 
-
     def __str__(self):
         """Method overridden to return desired string
 
