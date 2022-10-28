@@ -103,3 +103,14 @@ class Rectangle(Base):
         for height in range(self.__height):  # loop thru the heights
             # print d width for each
             print("".join(["#" for width in range(self.__width)]))
+
+    def __str__(self):
+        """Method overridden to return desired string
+
+        Returns:
+            str: [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        shape = f"[{type(self).__name__}] ({self.id})"
+        coords = f"{self.x}/{self.y}"
+        sides = f"{self.__width}/{self.__height}"
+        return f"{shape} {coords} - {sides}"
