@@ -20,8 +20,22 @@ class Square(Rectangle):
         # The width and height must be assigned to the value of size
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """Getter function for the size of the square.
+        Returns: the size of the square
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Setter function for the size of the square."""
+        self.width = value
+        self.height = value
+
     def __str__(self):
         """Method overridden to return desired string
+        for class Square
 
         Returns:
             str: [Square] (<id>) <x>/<y> - <size>
