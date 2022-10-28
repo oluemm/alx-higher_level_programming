@@ -100,9 +100,15 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a visual representation of the rectangle"""
+        # using list comprehension, print required new lines for `y`
+        [print("") for y in range(self.y)]
         for height in range(self.__height):  # loop thru the heights
+            # print spaces suited to `x` on x-axis
+            [print(" ", end="") for x in range(self.x)]
             # print d width for each
-            print("".join(["#" for width in range(self.__width)]))
+            [print("#", end="") for w in range(self.__width)]
+            print("")
+
 
     def __str__(self):
         """Method overridden to return desired string
