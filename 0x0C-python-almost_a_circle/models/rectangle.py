@@ -100,5 +100,6 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a visual representation of the rectangle"""
-        for height in range(self.__height):
+        for height in range(self.__height):  # loop thru the heights
+            # print d width for each
             print("".join(["#" for width in range(self.__width)]))
