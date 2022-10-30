@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Base class instantiated"""
+import json
 
 
 class Base():
@@ -14,3 +15,6 @@ class Base():
             #  type(self) is used to initialize the private class attrib
             type(self).__nb_objects += 1  # auto assign id if not given
             self.id = type(self).__nb_objects
+
+    def to_json_string(list_dictionaries):
+        return json.dumps(f"{list_dictionaries}")
