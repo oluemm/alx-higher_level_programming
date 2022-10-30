@@ -33,6 +33,46 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """Updating instance attributes using postional args
+            and keyword arguments
+        """
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+            except IndexError:
+                pass
+            try:
+                self.size = args[1]
+            except IndexError:
+                pass
+            try:
+                self.x = args[2]
+            except IndexError:
+                pass
+            try:
+                self.y = args[3]
+            except IndexError:
+                pass
+            
+        else:
+            try:
+                self.id = kwargs["id"]
+            except KeyError:
+                pass
+            try:
+                self.size = kwargs["size"]
+            except KeyError:
+                pass
+            try:
+                self.x = kwargs["x"]
+            except KeyError:
+                pass
+            try:
+                self.y = kwargs["y"]
+            except KeyError:
+                pass
+
     def __str__(self):
         """Method overridden to return desired string
         for class Square
