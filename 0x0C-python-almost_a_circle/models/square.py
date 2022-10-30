@@ -84,3 +84,12 @@ class Square(Rectangle):
         coords = f"{self.x}/{self.y}"
         sides = f"{self.width}"
         return f"{shape} {coords} - {sides}"
+
+    def to_dictionary(self):
+        """Returns a dictionary representation of a Square."""
+        return_dict = {}
+        return_dict['id'] = self.id
+        return_dict['size'] = self.size
+        return_dict['x'] = self.x
+        return_dict['y'] = self.y
+        return return_dict
