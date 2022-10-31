@@ -5,6 +5,9 @@ import json
 
 class Base():
     """Base class for almost a circle tasks
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
     """
     __nb_objects = 0  # private class attrib: id tracker
 
@@ -23,7 +26,9 @@ class Base():
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        return json.dumps(f"{list_dictionaries}")
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -56,9 +61,36 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        if cls .__name__ == "Rectangle":
-            instance = cls(1, 1)
-        else:
-            instance = cls(1)
-        instance.update(**dictionary)
-        return instance
+        """Return a class instantied from a dictionary of attributes.
+
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                instance = cls(1, 1)
+            else:
+                instance = cls(1)
+            instance.update(**dictionary)
+            return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Return a list of classes instantiated from a file of JSON strings.
+
+        Reads from `<cls.__name__>.json`.
+
+        Returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
+        #  create a filename using the class.__name__ special method
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, "r") as jsonfile:  # open the json file
+                #  export instance dicts to list 
+                list_dicts = Base.from_json_string(jsonfile.read())
+                # return instances for each dictionary
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
