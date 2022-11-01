@@ -1,4 +1,6 @@
 *__pyc*
-.venv
-.ipynb_checkpoints!/.vscode/
-!/.ipynb_checkpoints/
+*venv
+*vscode
+*ipynb_checkpoints
+*idea
+test_csv.csv

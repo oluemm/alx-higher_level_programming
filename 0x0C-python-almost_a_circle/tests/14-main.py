@@ -12,3 +12,7 @@ if __name__ == "__main__":
     print(type(dictionary))
     print(json_dictionary)
     print(type(json_dictionary))
+    
+    json_dictionary_2 = Base.to_json_string([])
+    print(json_dictionary_2)
+    print(type(json_dictionary_2))
