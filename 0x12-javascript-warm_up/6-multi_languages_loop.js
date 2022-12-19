@@ -1,4 +1,8 @@
 #!/usr/bin/node
-for (const line of ['C is fun', 'Python is cool', 'Javascript is amazing']) {
+/* Initialize an array of languages */
+const langs = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+/* Loop through the array */
+for (const line of langs) {
+  /* print to stdout each element */
   console.log(line);
 }
