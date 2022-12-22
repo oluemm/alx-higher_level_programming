@@ -21,9 +21,14 @@ if __name__ == "__main__":
                          db=DB_NAME, host=HOST, port=PORT)
 
     cur = db.cursor()
-    cur.execute(f"SELECT * FROM `states` WHERE `name` LIKE '%{USER_INPUT}%';")
+    cur.execute(
+        "SELECT * FROM `states` \
+            WHERE `name` LIKE '{:s}' \
+        ORDER BY id".format(USER_INPUT)
+    )
 
     result = cur.fetchall()
     [print(state) for state in result]
+
     cur.close()
     db.close()
