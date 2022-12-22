@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-Lists all states that starts with 'N'.
+Lists all states that matches user's input.
 Usage:
 ------
-./1-filter_states.py <mysql username> <mysql password> <database name>
+./2-my_filter_states.py <mysql username> <mysql password> <database name>
 """
 import MySQLdb
 import sys
@@ -13,11 +13,12 @@ if __name__ == "__main__":
     USER = sys.argv[1]  # 1st command-line argument after executable
     PASSWORD = sys.argv[2]  # 2nd command-line argument after executable
     DB_NAME = sys.argv[3]  # 3rd command-line argument after executable
+    USER_INPUT = sys.argv[4]
 
     db = MySQLdb.connect(user=USER, passwd=PASSWORD, db=DB_NAME)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` WHERE `name` LIKE 'N%';")
+    cur.execute(f"SELECT * FROM `states` WHERE `name` LIKE '%{USER_INPUT}%';")
 
     result = cur.fetchall()
     [print(state) for state in result]

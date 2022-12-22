@@ -22,3 +22,5 @@ if __name__ == "__main__":
 
     result = cur.fetchall()
     [print(state) for state in result]
+    cur.close()
+    db.close()
