@@ -8,15 +8,17 @@ Usage:
 import MySQLdb
 import sys
 
-# 1st command-line argument would return the filename that was run
-USER = sys.argv[1]  # 1st command-line argument after executable
-PASSWORD = sys.argv[2]  # 2nd command-line argument after executable
-DB_NAME = sys.argv[3]  # 3rd command-line argument after executable
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD, db=DB_NAME)
-    cur = db.cursor()
+    # 1st command-line argument would return the filename that was run
+    USER = sys.argv[1]  # 1st command-line argument after executable
+    PASSWORD = sys.argv[2]  # 2nd command-line argument after executable
+    DB_NAME = sys.argv[3]  # 3rd command-line argument after executable
 
-    cur.execute("SELECT * from states;")
+    db = MySQLdb.connect(user=USER, passwd=PASSWORD, db=DB_NAME)
+
+    cur = db.cursor()
+    cur.execute("SELECT * FROM `states` ORDER BY `id` ASC ;")
+
     result = cur.fetchall()
     [print(state) for state in result]
