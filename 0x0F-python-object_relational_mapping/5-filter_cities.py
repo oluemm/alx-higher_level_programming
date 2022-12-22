@@ -12,10 +12,21 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = db.cursor()
-    c.execute("SELECT * FROM `cities` as `c` \
-                INNER JOIN `states` as `s` \
-                   ON `c`.`state_id` = `s`.`id` \
-                ORDER BY `c`.`id`")
-    print(", ".join([ct[2] for ct in c.fetchall() if ct[4] == sys.argv[4]]))
+    # 1st command-line argument would return the filename that was run
+    USER = sys.argv[1]  # 1st command-line argument after executable
+    PASSWORD = sys.argv[2]  # 2nd command-line argument after executable
+    DB_NAME = sys.argv[3]  # 3rd command-line argument after executable
+    USER_INPUT = sys.argv[4]
+    HOST = "localhost"
+    PORT = 3306
+
+    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
+                         db=DB_NAME, host=HOST, port=PORT, charset="utf8")
+    cur = db.cursor()
+    cur.execute("SELECT * FROM `cities` as `city` \
+                INNER JOIN `states` as `state` \
+                   ON `city`.`state_id` = `state`.`id` \
+                       WHERE `state`.`name` LIKE %s\
+                ORDER BY `city`.`id`", (USER_INPUT,))
+    results = cur.fetchall()
+    print(", ".join([city[2] for city in results]))
