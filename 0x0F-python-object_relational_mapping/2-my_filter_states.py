@@ -14,8 +14,11 @@ if __name__ == "__main__":
     PASSWORD = sys.argv[2]  # 2nd command-line argument after executable
     DB_NAME = sys.argv[3]  # 3rd command-line argument after executable
     USER_INPUT = sys.argv[4]
+    HOST = "localhost"
+    PORT = 3306
 
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD, db=DB_NAME)
+    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
+                         db=DB_NAME, host=HOST, port=PORT)
 
     cur = db.cursor()
     cur.execute(f"SELECT * FROM `states` WHERE `name` LIKE '%{USER_INPUT}%';")
