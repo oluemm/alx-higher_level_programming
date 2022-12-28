@@ -16,13 +16,16 @@ if __name__ == "__main__":
     HOST = "localhost"
     PORT = 3306
 
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
-                         db=DB_NAME, host=HOST, port=PORT, charset="utf8")
+    db = MySQLdb.connect(
+        user=USER, passwd=PASSWORD, db=DB_NAME,
+        host=HOST, port=PORT, charset="utf8"
+    )
     cur = db.cursor()
-    cur.execute("SELECT `city`.`id`, `city`.`name`, `state`.`name`\
+    cur.execute(
+        "SELECT `city`.`id`, `city`.`name`, `state`.`name`\
         FROM `cities` as `city` \
             INNER JOIN `states` as `state` \
                 ON `city`.`state_id` = `state`.`id` \
                     ORDER BY `city`.`id`"
-                    )
+    )
     [print(city) for city in cur.fetchall()]

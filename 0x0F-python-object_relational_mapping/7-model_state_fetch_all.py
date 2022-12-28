@@ -11,9 +11,15 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State
 
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+    USER = sys.argv[1]
+    PASSWORD = sys.argv[2]
+    DB_NAME = sys.argv[3]
+
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost/{}".format(USER, PASSWORD, DB_NAME),
+        pool_pre_ping=True  # It checks if the connection is
+        # still alive and re-connects if not.
+    )
     Session = sessionmaker(bind=engine)
     session = Session()
 

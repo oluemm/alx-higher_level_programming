@@ -20,13 +20,18 @@ if __name__ == "__main__":
     HOST = "localhost"
     PORT = 3306
 
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
-                         db=DB_NAME, host=HOST, port=PORT, charset="utf8")
+    db = MySQLdb.connect(
+        user=USER, passwd=PASSWORD, db=DB_NAME,
+        host=HOST, port=PORT, charset="utf8"
+    )
     cur = db.cursor()
-    cur.execute("SELECT * FROM `cities` as `city` \
+    cur.execute(
+        "SELECT * FROM `cities` as `city` \
                 INNER JOIN `states` as `state` \
                    ON `city`.`state_id` = `state`.`id` \
                        WHERE `state`.`name` LIKE %s\
-                ORDER BY `city`.`id`", (USER_INPUT,))
+                ORDER BY `city`.`id`",
+        (USER_INPUT,),
+    )
     results = cur.fetchall()
     print(", ".join([city[2] for city in results]))

@@ -1,11 +1,10 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-Lists the State object with the name passed as argument
+Lists all State objects that contain the letter a
 from the database hbtn_0e_6_usa.
-Usage: ./10-model_state_my_get.py <mysql username> /
-                                  <mysql password> /
-                                  <database name>
-                                  <state name searched>
+Usage: ./9-model_state_filter_a.py <mysql username> /
+                                   <mysql password> /
+                                   <database name>
 """
 import sys
 from sqlalchemy import create_engine
@@ -13,17 +12,25 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State
 
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+    USER = sys.argv[1]
+    PASSWORD = sys.argv[2]
+    DB_NAME = sys.argv[3]
+    STATE_NAME = sys.argv[4]
+
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost/{}".format(USER, PASSWORD, DB_NAME),
+        pool_pre_ping=True  # It checks if the connection is
+        # still alive and re-connects if not.
+    )
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    found = False
-    for state in session.query(State):
-        if state.name == sys.argv[4]:
-            print("{}".format(state.id))
-            found = True
-            break
-    if found is False:
+    states = (
+        session.query(State)
+        .filter(State.name == STATE_NAME)
+        .order_by(State.id).all()
+    )
+    if not states:
         print("Not found")
+    else:
+        [print("{}: {}".format(state.id, state.name)) for state in states]

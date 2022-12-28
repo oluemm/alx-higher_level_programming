@@ -20,11 +20,16 @@ if __name__ == "__main__":
     HOST = "localhost"
     PORT = 3306
 
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
-                         db=DB_NAME, host=HOST, port=PORT, charset="utf8")
+    db = MySQLdb.connect(
+        user=USER, passwd=PASSWORD,
+        db=DB_NAME, host=HOST, port=PORT, charset="utf8"
+    )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
-                (USER_INPUT,))
+    cur.execute(
+        "SELECT * FROM states \
+        WHERE name LIKE %s ORDER BY id ASC",
+        (USER_INPUT,)
+    )
 
     result = cur.fetchall()
     [print(state) for state in result]

@@ -17,14 +17,18 @@ if __name__ == "__main__":
     HOST = "localhost"
     PORT = 3306
 
-    db = MySQLdb.connect(user=USER, passwd=PASSWORD,
-                         db=DB_NAME, host=HOST, port=PORT)
+    db = MySQLdb.connect(
+        user=USER, passwd=PASSWORD,
+        db=DB_NAME, host=HOST, port=PORT
+        )
 
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM `states` \
             WHERE `name` LIKE '{:s}' \
-        ORDER BY id".format(USER_INPUT)
+        ORDER BY id".format(
+            USER_INPUT
+        )
     )
 
     result = cur.fetchall()
