@@ -5,15 +5,14 @@ Inherits from SQLAlchemy Base and links to the MySQL table cities.
 """
 
 from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from model_state import Base
 
 
 class City(Base):
     """Represents a city for a MySQL database.
 
     Attributes:
+    -----------
         id (str): The city's id.
         name (sqlalchemy.Integer): The city's name.
         state_id (sqlalchemy.String): The city's state id.
