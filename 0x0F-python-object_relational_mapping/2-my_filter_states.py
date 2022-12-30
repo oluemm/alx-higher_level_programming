@@ -25,7 +25,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM `states` \
-            WHERE `name` LIKE '{:s}' \
+            WHERE `name` LIKE BINARY'{:s}' \
         ORDER BY id".format(
             USER_INPUT
         )
