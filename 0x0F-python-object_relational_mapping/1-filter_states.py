@@ -22,7 +22,8 @@ if __name__ == "__main__":
         )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` WHERE `name` LIKE 'N%';")
+    #  `LIKE BINARY`--> is used to condition a forced case sensitivity
+    cur.execute("SELECT * FROM `states` WHERE `name` LIKE BINARY'N%';")
 
     result = cur.fetchall()
     [print(state) for state in result]
