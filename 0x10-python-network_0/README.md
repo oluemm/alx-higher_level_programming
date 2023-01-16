@@ -28,7 +28,7 @@
 
 - [**Mandatory Task**](#mandatory-task)
 	- [0. cURL body size](0-body_size.sh)
-	- [Task - 1](link_to_file)
+	- [1. cURL to the end](1-body.sh)
 - [**Advanced Task**](#advanced-task)
 	- [Task - 013](link_to_file)
 	- [Task - 014](link_to_file)
@@ -57,6 +57,19 @@ root@c74915c52729:~/0x10$ ./0-body_size.sh 0.0.0.0:5000
 - [x] *File:* [Task 0](0-body_size.sh)
 
 ---
+#### 1. cURL to the end
+
+**Problem:** Write a Bash script that takes in a URL, sends a `GET` request to the URL, and displays the body of the response
+
+**Requirements:**
+* Display only body of a `200` status code response
+* You have to use curl
+```
+root@c74915c52729:/# ./1-body.sh 0.0.0.0:5000/route_1 ; echo ""
+Route 2
+root@c74915c52729:/#
+```
+- [x] *File:* [1-body.sh](1-body.sh)
 
 #### Task
 
