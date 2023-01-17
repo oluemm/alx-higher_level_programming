@@ -35,8 +35,9 @@
 	- [5. cURL POST parameters](5-post_params.sh)
 	- [6. Find a peak](6-peak.py)
 - [**Advanced Task**](#advanced-task)
-	- [Task - 013](link_to_file)
-	- [Task - 014](link_to_file)
+	- [7. Only status code](100-status_code.sh)
+	- [8. cURL a JSON file](101-post_json.sh)
+	- [9. Catch me if you can!](102-catch_me.sh)
 
 ---
 
@@ -192,7 +193,7 @@ root@c74915c52729:/0x10$
 ### Advanced Task
 
 ---
-#### Task - 013
+#### 7. Only status code
 **Problem:** lorem ipsum
 
 **Requirements:**
@@ -202,11 +203,11 @@ root@c74915c52729:/0x10$
 ```
 code sample
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [ ] *File:* [100-status_code.sh](100-status_code.sh)
 
 ---
 
-#### Task - 014
+#### 8. cURL a JSON file
 
 **Problem:** lorem ipsum
 
@@ -217,7 +218,22 @@ code sample
 ```
 code sample
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [ ] *File:* [101-post_json.sh](101-post_json.sh)
+
+---
+
+#### 9. Catch me if you can!
+
+**Problem:** lorem ipsum
+
+**Requirements:**
+* lorem ipsum
+* lorem ipsum
+
+```
+code sample
+```
+- [ ] *File:* [102-catch_me.sh](102-catch_me.sh)
 
 ---
 
