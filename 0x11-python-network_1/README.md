@@ -57,9 +57,12 @@ Body response:$
 * You must use a `with` statement
 
 ```
-code sample
+imitor＠excalibur»0x11-python-network_1(main)✗ ./1-hbtn_header.py https://alx-intranet.hbtn.io
+5d72bae6-de97-4cd4-937d-ff3806edd7a6
+imitor＠excalibur»0x11-python-network_1(main)➜ ./1-hbtn_header.py https://alx-intranet.hbtn.io
+6e3f93a7-b987-40d2-880e-96aa6b2a8ca3
 ```
-- [ ] *File:* [1-hbtn_header.py](1-hbtn_header.py)
+- [x] *File:* [1-hbtn_header.py](1-hbtn_header.py)
 
 
 ---
