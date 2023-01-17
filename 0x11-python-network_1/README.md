@@ -7,7 +7,7 @@
 	- [0. What's my status? #0](0-hbtn_status.py)
 	- [1. Response header value #0](1-hbtn_header.py)
 	- [2. POST an email #0](2-post_email.py)
-	- []()
+	- [3. Error code #0](3-error_code.py)
 	- []()
 	- []()
 	- []()
@@ -88,18 +88,29 @@ root@664b640ac343:/#
 
 ---
 
-#### Task
+#### 3. Error code #0
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in `utf-8`).
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* You have to manage `urllib.error.HTTPError` exceptions and print: `Error code:` followed by the HTTP status code
+* You must use the packages `urllib` and `sys`
+* You are not allowed to import other packages than `urllib` and `sys`
+* You don’t need to check arguments passed to the script (number or type)
+* You must use the `with` statement
 ```
-code sample
+root@664b640ac343:/# ./3-error_code.py http://0.0.0.0:5000
+Index
+root@664b640ac343:/# ./3-error_code.py http://0.0.0.0:5000/status_401
+Error code: 401
+root@664b640ac343:/# ./3-error_code.py http://0.0.0.0:5000/doesnt_exist
+Error code: 404
+root@664b640ac343:/# ./3-error_code.py http://0.0.0.0:5000/status_500
+Error code: 500
+root@664b640ac343:/# ./3-error_code.py http://httpbin.org/status/501
+Error code: 501
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [3-error_code.py](3-error_code.py)
 
 
 ---
