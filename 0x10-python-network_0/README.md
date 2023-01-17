@@ -33,7 +33,7 @@
 	- [3. cURL only methods](3-methods.sh)
 	- [4. cURL headers](4-header.sh)
 	- [5. cURL POST parameters](5-post_params.sh)
-	- []()
+	- [6. Find a peak](6-peak.py)
 - [**Advanced Task**](#advanced-task)
 	- [Task - 013](link_to_file)
 	- [Task - 014](link_to_file)
@@ -145,22 +145,47 @@ POST params:
     subject: I will always be here for PLD
 root@c74915c52729:/# 
 ```
-- [ ] *File:* [5-post_params.sh](5-post_params.sh)
+- [x] *File:* [5-post_params.sh](5-post_params.sh)
 
 ---
 
-#### Task
+#### 6. Find a peak
 
-**Problem:** lorem ipsum
+**Problem:** Write a function that finds a **peak** in a list of unsorted integers
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
+* Prototype: `def find_peak(list_of_integers):`
+* You are not allowed to import any module
+* Your algorithm must have the lowest complexity (hint: you don’t need to go through all numbers to find a peak)
+* `6-peak.py` must contain the function
+* `6-peak.txt` must contain the complexity of your algorithm: `O(log(n))`,` O(n)`, `O(nlog(n))` or `O(n2)`
+* **Note**: there may be more than one peak in the list
 
 ```
-code sample
+root@c74915c52729:/0x10$ cat 6-main.py
+#!/usr/bin/python3
+""" Test function find_peak """
+find_peak = __import__('6-peak').find_peak
+
+print(find_peak([1, 2, 4, 6, 3]))
+print(find_peak([4, 2, 1, 2, 3, 1]))
+print(find_peak([2, 2, 2]))
+print(find_peak([]))
+print(find_peak([-2, -4, 2, 1]))
+print(find_peak([4, 2, 1, 2, 2, 2, 3, 1]))
+
+root@c74915c52729:/0x10$ ./6-main.py
+6
+3
+2
+None
+2
+4
+root@c74915c52729:/0x10$ wc -l 6-peak.txt 
+2 6-peak.txt
+root@c74915c52729:/0x10$ 
 ```
-- [ ] *File:* [Task](file_url)
+- [ ] *File:* [6-peak.py](6-peak.py)
 
 ---
 
