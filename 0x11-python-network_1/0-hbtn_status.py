@@ -15,6 +15,6 @@ if __name__ == "__main__":
         utf8_ctn = html.decode('utf-8')
 
         print(f"Body response:\
-            \n\t- type:{c_type}\
-                \n\t- content:{html}\
-                    \n\t- utf8 content:{utf8_ctn}")
+            \n\t- type: {c_type}\
+                \n\t- content: {html}\
+                    \n\t- utf8 content: {utf8_ctn}")
