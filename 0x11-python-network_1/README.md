@@ -9,7 +9,7 @@
 	- [2. POST an email #0](2-post_email.py)
 	- [3. Error code #0](3-error_code.py)
 	- [4. What's my status? #1](4-hbtn_status.py)
-	- []()
+	- [5. Response header value #1](5-hbtn_header.py)
 	- []()
 	- []()
 	- []()
@@ -125,7 +125,7 @@ Error code: 501
 * The body of the response must be display like the following example (tabulation before `-`)
 
 ```
-imitor＠excalibur»alx-higher_level_programming/0x11-python-network_1(main)➜ ./4-hbtn_status.py     
+imitor＠excalibur»0x11-python-network_1(main)➜ ./4-hbtn_status.py     
 Body response:        
         - type: <class 'str'>            
         - content: OK
@@ -135,18 +135,22 @@ Body response:
 
 ---
 
-#### Task
+#### 5. Response header value #1
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes in a URL, sends a request to the URL and displays the value of the variable `X-Request-Id` in the response header
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* You must use the packages `requests` and `sys`
+* You are not allow to import other packages than `requests` and `sys`
+* The value of this variable is different for each request
+* You don’t need to check script arguments (number and type)
 ```
-code sample
+imitor＠excalibur»0x11-python-network_1(main)✗ ./5-hbtn_header.py https://alx-intranet.hbtn.io
+c94bac9a-10d5-47b7-b6d6-fffc945494c2
+imitor＠excalibur»0x11-python-network_1(main)➜ ./5-hbtn_header.py https://alx-intranet.hbtn.io
+d6b3b27e-0f1e-4331-8551-901f83e8993a
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [5-hbtn_header.py](5-hbtn_header.py)
 
 
 ---
