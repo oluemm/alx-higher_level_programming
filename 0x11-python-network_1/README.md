@@ -125,9 +125,12 @@ Error code: 501
 * The body of the response must be display like the following example (tabulation before `-`)
 
 ```
-code sample
+imitor＠excalibur»alx-higher_level_programming/0x11-python-network_1(main)➜ ./4-hbtn_status.py     
+Body response:        
+        - type: <class 'str'>            
+        - content: OK
 ```
-- [ ] *File:* [4-hbtn_status.py](4-hbtn_status.py)
+- [x] *File:* [4-hbtn_status.py](4-hbtn_status.py)
 
 
 ---

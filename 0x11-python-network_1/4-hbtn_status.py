@@ -12,6 +12,4 @@ if __name__ == "__main__":
     # parse from byte to utf8
     # utf8_ctn = html.decode('utf-8')  # to decode bytes
 
-    print(f"Body response:\
-        \n\t- type: {c_type}\
-            \n\t- content: {html}")
+    print(f"Body response:\n\t- type: {c_type}\n\t- content: {html}")
