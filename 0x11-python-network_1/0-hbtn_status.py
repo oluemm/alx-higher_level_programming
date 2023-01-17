@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Python script that fetches https://alx-intranet.hbtn.io/status"""
 import urllib.request
-import urllib.parse
+# import urllib.parse
 
 if __name__ == "__main__":
     # open the given url and alias it as response

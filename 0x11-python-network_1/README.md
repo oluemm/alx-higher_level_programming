@@ -6,7 +6,7 @@
 - [**Mandatory Task**](#mandatory-task)
 	- [0. What's my status? #0](0-hbtn_status.py)
 	- [1. Response header value #0](1-hbtn_header.py)
-	- []()
+	- [2. POST an email #0](2-post_email.py)
 	- []()
 	- []()
 	- []()
@@ -67,18 +67,23 @@ imitor＠excalibur»0x11-python-network_1(main)➜ ./1-hbtn_header.py https:/
 
 ---
 
-#### Task
+#### 2. POST an email #0
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes in a URL and an email, sends a `POST` request to the passed URL with the email as a parameter, and displays the body of the response (decoded in `utf-8`)
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
+* The email must be sent in the `email` variable
+* You must use the packages `urllib` and `sys`
+* You are not allowed to import packages other than `urllib` and `sys`
+* You don’t need to check arguments passed to the script (number or type)
+* You must use the `with` statement
 
 ```
-code sample
+root@664b640ac343:/# ./2-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
+Your email is: hr@holbertonschool.com
+root@664b640ac343:/# 
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [2-post_email.py](2-post_email.py)
 
 
 ---
