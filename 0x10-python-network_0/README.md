@@ -102,11 +102,11 @@ root@c74915c52729:/#
 Please test your script in the sandbox provided, using the web server running on port 5000
 
 ```
-guillaume@ubuntu:~/0x10$ ./3-methods.sh 0.0.0.0:5000/route_4
+root@c74915c52729:/# ./3-methods.sh 0.0.0.0:5000/route_4
 OPTIONS, HEAD, PUT
-guillaume@ubuntu:~/0x10$
+root@c74915c52729:/#
 ```
-- [ ] *File:* [3-methods.sh](3-methods.sh)
+- [x] *File:* [3-methods.sh](3-methods.sh)
 
 ---
 
