@@ -29,6 +29,8 @@
 - [**Mandatory Task**](#mandatory-task)
 	- [0. cURL body size](0-body_size.sh)
 	- [1. cURL to the end](1-body.sh)
+	- [2. cURL Method](2-delete.sh)
+	- [3. cURL only methods](3-methods.sh)
 - [**Advanced Task**](#advanced-task)
 	- [Task - 013](link_to_file)
 	- [Task - 014](link_to_file)
@@ -57,6 +59,7 @@ root@c74915c52729:~/0x10$ ./0-body_size.sh 0.0.0.0:5000
 - [x] *File:* [Task 0](0-body_size.sh)
 
 ---
+
 #### 1. cURL to the end
 
 **Problem:** Write a Bash script that takes in a URL, sends a `GET` request to the URL, and displays the body of the response
@@ -71,6 +74,42 @@ root@c74915c52729:/#
 ```
 - [x] *File:* [1-body.sh](1-body.sh)
 
+---
+
+#### 2. cURL Method
+
+**Problem:** Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+
+**Requirements:**
+* You have to use `curl`
+* Please test your script in the sandbox provided, using the web server running on port 5000
+
+```
+root@c74915c52729:/# ./2-delete.sh 0.0.0.0:5000/route_3 ; echo ""
+I'm a DELETE request
+root@c74915c52729:/#
+```
+- [x] *File:* [2-delete.sh](2-delete.sh)
+
+---
+
+#### 3. cURL only methods
+
+**Problem:** Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
+
+**Requirements:**
+* You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
+
+```
+guillaume@ubuntu:~/0x10$ ./3-methods.sh 0.0.0.0:5000/route_4
+OPTIONS, HEAD, PUT
+guillaume@ubuntu:~/0x10$
+```
+- [ ] *File:* [3-methods.sh](3-methods.sh)
+
+---
+
 #### Task
 
 **Problem:** lorem ipsum
@@ -82,8 +121,37 @@ root@c74915c52729:/#
 ```
 code sample
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [ ] *File:* [Task](file_url)
 
+---
+
+#### Task
+
+**Problem:** lorem ipsum
+
+**Requirements:**
+* lorem ipsum
+* lorem ipsum
+
+```
+code sample
+```
+- [ ] *File:* [Task](file_url)
+
+---
+
+#### Task
+
+**Problem:** lorem ipsum
+
+**Requirements:**
+* lorem ipsum
+* lorem ipsum
+
+```
+code sample
+```
+- [ ] *File:* [Task](file_url)
 
 ---
 
