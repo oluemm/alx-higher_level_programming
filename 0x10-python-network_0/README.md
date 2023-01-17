@@ -31,6 +31,7 @@
 	- [1. cURL to the end](1-body.sh)
 	- [2. cURL Method](2-delete.sh)
 	- [3. cURL only methods](3-methods.sh)
+	- [4. cURL headers](4-header.sh)
 - [**Advanced Task**](#advanced-task)
 	- [Task - 013](link_to_file)
 	- [Task - 014](link_to_file)
@@ -110,18 +111,20 @@ root@c74915c52729:/#
 
 ---
 
-#### Task
+#### 4. cURL headers
 
-**Problem:** lorem ipsum
+**Problem:** Write a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
+* A header variable `X-School-User-Id` must be sent with the value `98`
+* You have to use `curl`
 
 ```
-code sample
+root@c74915c52729:/# ./4-header.sh 0.0.0.0:5000/route_5 ; echo ""
+Hello School!
+root@c74915c52729:/# 
 ```
-- [ ] *File:* [Task](file_url)
+- [ ] *File:* [4-header.sh](4-header.sh)
 
 ---
 
