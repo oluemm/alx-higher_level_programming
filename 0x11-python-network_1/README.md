@@ -13,10 +13,9 @@
 	- [6. POST an email #1](6-post_email.py)
 	- [7. Error code #1](7-error_code.py)
 	- [8. Search API](8-json_api.py)
-	- []()
+	- [9. My GitHub!](10-my_github.py)
 - [**Advanced Task**](#advanced-task)
-	- [Task - 013](link_to_file)
-	- [Task - 014](link_to_file)
+	- [10. Time for an interview!](100-github_commits.py)
 
 ---
 
@@ -229,50 +228,60 @@ No result
 
 ---
 
-#### Task
+#### 9. My GitHub!
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes your GitHub credentials (username and password) and uses the `GitHub API` to display your `id`
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
+* You must use `Basic Authentication` with a `personal access token as password` to access to your information (only `read:user` permission is needed)
+* The first argument will be your `username`
+* The second argument will be your `password` (in your case, a `personal access token as password`)
+* You must use the package `requests` and `sys`
+* You are not allowed to import packages other than `requests` and `sys`
+* You don’t need to check arguments passed to the script (number or type)
 
 ```
-code sample
+guillaume@ubuntu:~/0x11$ ./10-my_github.py papamuziko cisfun
+2531536
+guillaume@ubuntu:~/0x11$ ./10-my_github.py papamuziko wrong_pwd
+None
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [10-my_github.py](10-my_github.py)
 
 
 ---
 ### Advanced Task
 
 ---
-#### Task - 013
-**Problem:** lorem ipsum
+#### 10. Time for an interview!
+**Problem:** The Holberton School staff evaluates candidates applying for a back-end position with multiple technical challenges, like this one:
+```
+Please list 10 commits (from the most recent to oldest) of the repository “rails” by the user “rails”
+You must use the GitHub API, here is the documentation https://developer.github.com/v3/repos/commits/
+Print all commits by: `<sha>: <author name>` (one by line)
+```
+Write a Python script that takes 2 arguments in order to solve this challenge.
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* The first argument will be the `repository name`
+* The second argument will be the `owner name`
+* You must use the packages `requests` and `sys`
+* You are not allowed to import packages other than `requests` and `sys`
+* You don’t need to check arguments passed to the script (number or type)
 ```
-code sample
+imitor＠excalibur»0x11-python-network_1(main)➜ ./100-github_commits.py alx-higher_level_programming fashemma007
+e3cbaeb438ca0925be8bde0ae58df521fabfcb9e: Emmanuel Fasogba
+f92b29905086e1dbd491e7b8e715045b2023b177: Emmanuel Fasogba
+4cdaff0e538fc4512e69f17fe574affd0b6b95ac: Emmanuel Fasogba
+71b1f9c13ef50d5fe700d14e084e8c0554ccaee7: Emmanuel Fasogba
+cbbbd14074c81c307a18c773574e5da927ea92b9: Emmanuel Fasogba
+98c7b46a77491138efa751d6314e4da5fe152e78: Emmanuel Fasogba
+e12c2e28eefdf139a86194ec61ba7e1517fe1cdb: Emmanuel Fasogba
+bb4462d1af3b0d1bc10e7ff843f3c0368eb4d78c: Emmanuel Fasogba
+d6695767d7f76f3e3ec2b9bfb8e2332dc1a12411: Emmanuel Fasogba
+ba0eb7ca7ca1fb80899f2071a55ff754d4f3bb4f: Emmanuel Fasogba
 ```
-- [ ] *File:* [Task 1](link_to_file)
-
----
-
-#### Task - 014
-
-**Problem:** lorem ipsum
-
-**Requirements:**
-* lorem ipsum
-* lorem ipsum
-
-```
-code sample
-```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [100-github_commits.py](100-github_commits.py)
 
 ---
 
