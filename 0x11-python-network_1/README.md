@@ -12,7 +12,7 @@
 	- [5. Response header value #1](5-hbtn_header.py)
 	- [6. POST an email #1](6-post_email.py)
 	- [7. Error code #1](7-error_code.py)
-	- []()
+	- [8. Search API](8-json_api.py)
 	- []()
 - [**Advanced Task**](#advanced-task)
 	- [Task - 013](link_to_file)
@@ -196,23 +196,35 @@ root@664b640ac343:/# ./7-error_code.py http://0.0.0.0:5000/status_500
 Error code: 500
 root@664b640ac343:/#
 ```
-- [ ] *File:* [7-error_code.py](7-error_code.py)
+- [x] *File:* [7-error_code.py](7-error_code.py)
 
 
 ---
 
-#### Task
+#### 8. Search API
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes in a letter and sends a `POST` request to `http://0.0.0.0:5000/search_user` with the letter as a parameter.
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* The letter must be sent in the variable `q`
+* If no argument is given, set `q=""`
+* If the response body is properly JSON formatted and not empty, display the `id` and `name` like this: `[<id>] <name>`
+* Otherwise:
+	* Display `Not a valid JSON` if the JSON is invalid
+	* Display `No result` if the JSON is empty
+* You must use the package `requests` and `sys`
+* You are not allowed to import packages other than `requests` and `sys`
 ```
-code sample
+root@664b640ac343:/# ./8-json_api.py  as
+[2024] asjctsgrfbxp
+root@664b640ac343:/# ./8-json_api.py
+No result
+root@664b640ac343:/# ./8-json_api.py  aswwwwwwwwwwwwwwwwwwwwww
+[9242] aswwwwwwwwwwwwwwwwwwwwwwgltwkxgcsz
+root@664b640ac343:/# ./8-json_api.py 23
+No result
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [8-json_api.py](8-json_api.py)
 
 
 ---
