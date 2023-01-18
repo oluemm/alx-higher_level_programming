@@ -3,7 +3,6 @@
 the value of the X-Request-Id variable found in the header of the response"""
 
 import urllib.request
-import urllib.parse
 import sys
 
 if __name__ == "__main__":
