@@ -186,7 +186,15 @@ Your email is: imitor@gmail.com
 * You are not allowed to import packages other than `requests` and `sys`
 * You don’t need to check arguments passed to the script (number or type)
 ```
-code sample
+root@664b640ac343:/# ./7-error_code.py http://0.0.0.0:5000
+Index
+root@664b640ac343:/# ./7-error_code.py http://0.0.0.0:5000/status_401
+Error code: 401
+root@664b640ac343:/# ./7-error_code.py http://0.0.0.0:5000/doesnt_exist
+Error code: 404
+root@664b640ac343:/# ./7-error_code.py http://0.0.0.0:5000/status_500
+Error code: 500
+root@664b640ac343:/#
 ```
 - [ ] *File:* [7-error_code.py](7-error_code.py)
 
