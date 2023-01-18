@@ -10,8 +10,8 @@
 	- [3. Error code #0](3-error_code.py)
 	- [4. What's my status? #1](4-hbtn_status.py)
 	- [5. Response header value #1](5-hbtn_header.py)
-	- []()
-	- []()
+	- [6. POST an email #1](6-post_email.py)
+	- [7. Error code #1](7-error_code.py)
 	- []()
 	- []()
 - [**Advanced Task**](#advanced-task)
@@ -155,34 +155,40 @@ d6b3b27e-0f1e-4331-8551-901f83e8993a
 
 ---
 
-#### Task
+#### 6. POST an email #1
 
-**Problem:** lorem ipsum
+**Problem:** Write a Python script that takes in a URL and an email address, sends a `POST` request to the passed URL with the email as a parameter, and finally displays the body of the response.
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* The email must be sent in the variable `email`
+* You must use the packages `requests` and `sys`
+* You are not allowed to import packages other than `requests` and `sys`
+* You don’t need to error check arguments passed to the script (number or type)
 ```
-code sample
+root@664b640ac343:/# ./6-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
+Your email is: hr@holbertonschool.com
+root@664b640ac343:/# ./6-post_email.py http://0.0.0.0:5000/post_email imitor@gmail.com
+Your email is: imitor@gmail.com
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [x] *File:* [6-post_email.py](6-post_email.py)
 
 
 ---
 
-#### Task
+#### 7. Error code #1
 
-**Problem:** lorem ipsum
+
+**Problem:** Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response.
 
 **Requirements:**
-* lorem ipsum
-* lorem ipsum
-
+* If the HTTP status code is greater than or equal to 400, print: `Error code:` followed by the value of the HTTP status code
+* You must use the packages `requests` and `sys`
+* You are not allowed to import packages other than `requests` and `sys`
+* You don’t need to check arguments passed to the script (number or type)
 ```
 code sample
 ```
-- [ ] *File:* [Task 1](link_to_file)
+- [ ] *File:* [7-error_code.py](7-error_code.py)
 
 
 ---
