@@ -5,7 +5,6 @@ Inherits from SQLAlchemy Base and links to the MySQL table states.
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
 from relationship_city import Base, City
 
 

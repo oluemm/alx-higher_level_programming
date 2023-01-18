@@ -49,7 +49,7 @@ session.new  # show all new instances
 session.commit()  # save all changes made
 # Lemme create myself
 emmy = User(name='Emmanuel', fullname='Emmanuel Fasogba', nickname='emiwest')
-session.add(emmy) # .add adds it to pending state, ready to save to db
+session.add(emmy)  # .add adds it to pending state, ready to save to db
 session.commit()  # .commit writes to db instance
 users_list = session.query(User).all()
 for item in users_list:
