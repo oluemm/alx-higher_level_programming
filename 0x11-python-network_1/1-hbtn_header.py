@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""script that sends a request to the URL and displays the value of the 
-X-Request-Id
+"""Displays the value of the X-Request-Id
+Usage: ./1-hbtn_header.py <URL>
 """
 import urllib.request
 import sys
+
 
 if __name__ == "__main__":
     URL = sys.argv[1]
