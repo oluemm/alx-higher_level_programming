@@ -1,11 +1,10 @@
 #!/usr/bin/node
 
 const request = require('request');
-const args = require('process');
+const { argv } = require('process');
 
 // extract url path from cmd line args
-const wedge = 'https://swapi-api.alx-tools.com/api/people/18/';
-const url = args.argv[2];
+const url = argv[2];
 
 request(url, function (error, response, body) {
   if (error) {
@@ -14,12 +13,11 @@ request(url, function (error, response, body) {
     const resp = JSON.parse(body);
     const movies = resp.results;
     let number = 0;
-    for (const i in movies) {
-      const charlist = movies[i].characters;
-      if (charlist.includes(wedge)) {
-        number = number + 1;
+    movies.forEach(movie => movie.characters.forEach(charUrl => {
+      if (charUrl.slice(-3, -1) === '18') {
+        number++;
       }
-    }
+    }));
     console.log(number);
   }
 });

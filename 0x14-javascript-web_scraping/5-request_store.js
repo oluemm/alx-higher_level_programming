@@ -1,9 +1,8 @@
 #!/usr/bin/node
 const fs = require('fs');
 const request = require('request');
-const process = require('process');
+const { argv } = require('process');
 
-const argv = process.argv;
 const url = argv[2];
 const filepath = argv[3];
 
