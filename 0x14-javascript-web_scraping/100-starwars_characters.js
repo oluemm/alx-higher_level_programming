@@ -6,7 +6,7 @@ const BaseUrl = 'https://swapi-api.hbtn.io/api/films/';
 const movieID = argv[2];
 const url = BaseUrl + movieID;
 
-function getNames(userurl) {
+function getNames (userurl) {
   request.get(userurl, function (err, resp, body) {
     if (err) {
       return console.error(err);
