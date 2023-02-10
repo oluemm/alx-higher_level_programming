@@ -4,15 +4,13 @@
 	</a>
 </h1>
 
-
-## Resources
-* [name_1](link)
-
-
 ## Project Overview
 
 - [**Mandatory Task**](#mandatory-task)
-	- [Task_0](link_to_file)
+	- [0. Readme](0-readme.js)
+	- [1. Write me](1-writeme.js)
+	- [2. Status code](2-statuscode.js)
+	- [3. Star wars movie title](3-starwars_title.js)
 	- [Task_1](link_to_file)
 - [**Advanced Task**](#advanced-task)
 	- [Task_013](link_to_file)
@@ -24,34 +22,73 @@
 <h2 style="text-align: center;">Tasks</h2>
 
 ### Mandatory Task
-#### Task_0
+#### 0. Readme
 
-**Problem:** 
+**Problem:** Write a script that reads and prints the content of a file.
 
 **Requirements:**
-* lorem_ipso
-* lorem_ipso
-
+* The first argument is the file path
+* The content of the file must be read in `utf-8`
+* If an error occurred during the reading, print the error object
 ```
-code sample
+imitor＠excalibur»0x14-javascript-web_scraping$ ./0-readme.js text.txt
+Hey buddy,
+How are you doing
 ```
-- [ ] *File:* [Task_0](link_to_file)
+- [x] *File:* [0-readme.js](0-readme.js)
 
 ---
 
-#### Task_1
+#### 1. Write me
 
-**Problem:** 
+**Problem:** Write a script that writes a string to a file.
 
 **Requirements:**
-* lorem_ipso
-* lorem_ipso
-
+* The first argument is the file path
+* The second argument is the string to write
+* The content of the file must be written in `utf-8`
+* If an error occurred during while writing, print the error object
 ```
-code sample
+imitor＠excalibur»0x14-javascript-web_scraping$ ./1-writeme.js hello.txt "Hello Text File"
+imitor＠excalibur»0x14-javascript-web_scraping$ cat hello.txt ; echo ""
+Hello Text File
 ```
-- [ ] *File:* [Task_1](link_to_file)
+- [x] *File:* [1-writeme.js](1-writeme.js)
 
+---
+
+#### 2. Status code
+
+**Problem:** Write a script that display the status code of a `GET` request.
+
+**Requirements:**
+* The first argument is the URL to request (`GET`)
+* The status code must be printed like this: `code: <status code>`
+* You must use the module `request`
+```
+imitor＠excalibur»0x14-javascript-web_scraping$ ./1-writeme.js hello.txt "Hello Text File"
+imitor＠excalibur»0x14-javascript-web_scraping$ cat hello.txt ; echo ""
+Hello Text File
+```
+- [x] *File:* [2-statuscode.js](2-statuscode.js)
+
+---
+
+#### 3. Star wars movie title
+
+**Problem:** Write a script that prints the title of a Star Wars movie where the episode number matches a given integer.
+
+**Requirements:**
+* The first argument is the movie ID
+* You must use the [Star wars API](https://swapi-api.alx-tools.com/api/films/) with the endpoint `https://swapi-api.alx-tools.com/api/films/:id`
+* You must use the module `request`
+```
+imitor＠excalibur»0x14-javascript-web_scraping$ ./3-starwars_title.js 5
+Attack of the Clones
+imitor＠excalibur»0x14-javascript-web_scraping$ ./3-starwars_title.js 2
+The Empire Strikes Back
+```
+- [x] *File:* [3-starwars_title.js](3-starwars_title.js)
 
 ---
 
